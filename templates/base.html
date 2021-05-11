@@ -1,0 +1,19 @@
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            {% block title %} {% endblock %}
+        </title>
+        {% load static %}
+        <!-- Static is folder name in project folder i,e. static/css/style.css -->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    </head>
+    <body>
+        <!-- including navbar  -->
+        {% include 'navbar.html' %} 
+        {% block body %}
+
+        {% endblock %}
+    </body>
+</html> 
